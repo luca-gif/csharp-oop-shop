@@ -1,9 +1,11 @@
 ﻿
-Product myProduct = new Product("iPhone", 50, "desc", 22);
+Product myProduct = new Product("iPhone", 999.99, "desc", 22);
 
-myProduct.SetName("Mio prodotto");
+myProduct.SetName("iPhone 12");
 myProduct.SetDescription("Descrizione prodotto");
-myProduct.SetPrice(50);
-myProduct.SetVat(32);
 
-Console.WriteLine(myProduct.name);
+/*Console.WriteLine(myProduct.GetCodeAndName());
+Console.WriteLine(myProduct.GetName());
+Console.WriteLine(myProduct.GetPrice());
+Console.WriteLine(myProduct.GetVatPrice());*/
+myProduct.GetExtendedCode();

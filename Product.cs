@@ -1,13 +1,13 @@
 ﻿public class Product{
-    public int code;
-    public string name;
-    public string description;
-    public double price;
-    public int vat;
+    int code;
+    string name;
+    string description;
+    double price;
+    int vat;
 
     //constructor
     public Product(string name, double price, string description, int vat) {
-        this.code = new Random().Next(1000,100000);
+        this.code = new Random().Next(1,1000);
         this.name = name;
         this.price = price;
         this.description = description;
@@ -16,12 +16,24 @@
 
     public double GetVatPrice()
     {
-        return this.price + (this.vat / 100);
+        return Math.Round((double)this.price + (this.price * this.vat / 100), 2);
     }
 
     public int GetCode()
     {
         return this.code;
+    }
+
+    public void GetExtendedCode()
+    {
+        string StringCode = this.code.ToString();
+
+        while(StringCode.Length < 8)
+        {
+            StringCode = "0" + StringCode;
+        }
+
+        Console.WriteLine(StringCode);
     }
 
     public string GetName()
@@ -59,6 +71,6 @@
     }
     public string GetCodeAndName()
     {
-        return code + name;
+        return $"Codice + Nome prodotto: {code} {name}";
     }
 }
