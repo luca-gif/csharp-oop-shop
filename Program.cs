@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+Product myProduct = new Product();
+
+myProduct.SetName("Mio prodotto");
+myProduct.SetDescription("Descrizione prodotto");
+myProduct.SetPrice(50);
+myProduct.SetVat(22);
+
